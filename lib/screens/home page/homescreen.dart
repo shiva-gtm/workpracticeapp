@@ -123,13 +123,29 @@ class _HomepageState extends State<Homepage> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          Upcomingevents(),
+                          Upcomingevents(
+                            color: Color(0xFFFF2281),
+                            text: 'Fast Filling',
+                            assets: 'assets/upcomingevent1.png',
+                          ),
                           SizedBox(width: 10),
-                          Upcomingevents(),
+                          Upcomingevents(
+                            color: Color(0xFF3873EA),
+                            text: 'Early Bird',
+                            assets: 'assets/upcomingevent1.png',
+                          ),
                           SizedBox(width: 10),
-                          Upcomingevents(),
+                          Upcomingevents(
+                            color: Color(0xFF3873EA),
+                            text: 'Early Bird',
+                            assets: 'assets/upcomingevent1.png',
+                          ),
                           SizedBox(width: 10),
-                          Upcomingevents(),
+                          Upcomingevents(
+                            color: Color(0xFFFF2281),
+                            text: 'Fast Filling',
+                            assets: 'assets/upcomingevent1.png',
+                          ),
                         ],
                       ),
                     ),

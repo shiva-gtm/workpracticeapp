@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
 
 class Upcomingevents extends StatelessWidget {
-  const Upcomingevents({super.key});
+  final dynamic color;
+  final String text;
+  final String assets;
+  const Upcomingevents({
+    super.key,
+    required this.color,
+    required this.text,
+    required this.assets,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +30,7 @@ class Upcomingevents extends StatelessWidget {
                   topLeft: Radius.circular(10),
                   topRight: Radius.circular(10),
                 ),
-                child: Image.asset(
-                  'assets/upcomingevent1.png',
-                  fit: BoxFit.fill,
-                ),
+                child: Image.asset(assets, fit: BoxFit.fill),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10, left: 115),
@@ -33,12 +38,12 @@ class Upcomingevents extends StatelessWidget {
                   height: 20,
                   width: 70,
                   decoration: BoxDecoration(
-                    color: Color(0XFFFF2281),
+                    color: color,
                     borderRadius: BorderRadius.circular(5),
                   ),
                   child: Center(
                     child: Text(
-                      'Fast Filling',
+                      text,
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 9,
