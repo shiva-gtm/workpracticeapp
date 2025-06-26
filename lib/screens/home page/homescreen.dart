@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:workpracticeapp/components/otherservices.dart';
 import 'package:workpracticeapp/components/ourservices.dart';
 import 'package:workpracticeapp/components/upcomingevents.dart';
 import 'package:workpracticeapp/screens/home%20page/hometopsection.dart';
+import 'package:workpracticeapp/screens/home%20page/reuseablecard.dart';
+import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -11,6 +14,7 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,7 +87,113 @@ class _HomepageState extends State<Homepage> {
                 ),
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 15),
+            ReuseableCard(
+              text: 'Upcoming Events',
+              children: [
+                Upcomingevents(
+                  color: Color(0xFFFF2281),
+                  text: 'Fast Filling',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+                SizedBox(width: 10),
+                Upcomingevents(
+                  color: Color(0xFF3873EA),
+                  text: 'Early Bird',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+                SizedBox(width: 10),
+                Upcomingevents(
+                  color: Color(0xFF3873EA),
+                  text: 'Early Bird',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+                SizedBox(width: 10),
+                Upcomingevents(
+                  color: Color(0xFFFF2281),
+                  text: 'Fast Filling',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+              ],
+            ),
+            SizedBox(height: 15),
+            ReuseableCard(
+              text: 'Upcoming Registration',
+              children: [
+                Upcomingevents(
+                  color: null,
+                  text: '',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+                SizedBox(width: 10),
+                Upcomingevents(
+                  color: null,
+                  text: '',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+                SizedBox(width: 10),
+                Upcomingevents(
+                  color: null,
+                  text: '',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+                SizedBox(width: 10),
+                Upcomingevents(
+                  color: null,
+                  text: '',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+              ],
+            ),
+            SizedBox(height: 15),
+            ReuseableCard(
+              text: 'Ongoing Deals',
+              children: [
+                Upcomingevents(
+                  color: null,
+                  text: '',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+                SizedBox(width: 10),
+                Upcomingevents(
+                  color: null,
+                  text: '',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+                SizedBox(width: 10),
+                Upcomingevents(
+                  color: null,
+                  text: '',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+                SizedBox(width: 10),
+                Upcomingevents(
+                  color: null,
+                  text: '',
+                  assets: 'assets/upcomingevent1.png',
+                ),
+              ],
+            ),
+            SizedBox(height: 15),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.only(left: 0, right: 0),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8),
+                child: Center(
+                  child: Image.asset(
+                    'assets/banner2.png',
+                    height: 120,
+                    width: 350,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(height: 15),
             Card(
               color: Colors.white,
               margin: EdgeInsets.only(left: 0, right: 0),
@@ -99,7 +209,7 @@ class _HomepageState extends State<Homepage> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Upcoming Events',
+                          'Our Past Events',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 20,
@@ -112,7 +222,8 @@ class _HomepageState extends State<Homepage> {
                             'View all',
                             style: TextStyle(
                               color: Color(0xFFFF2281),
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
                             ),
                           ),
                         ),
@@ -123,28 +234,120 @@ class _HomepageState extends State<Homepage> {
                       scrollDirection: Axis.horizontal,
                       child: Row(
                         children: [
-                          Upcomingevents(
-                            color: Color(0xFFFF2281),
-                            text: 'Fast Filling',
-                            assets: 'assets/upcomingevent1.png',
-                          ),
+                          Image.asset('assets/pastevent1.png'),
                           SizedBox(width: 10),
-                          Upcomingevents(
-                            color: Color(0xFF3873EA),
-                            text: 'Early Bird',
-                            assets: 'assets/upcomingevent1.png',
+                          Image.asset('assets/pastevent1.png'),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 15),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.only(left: 0, right: 0),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 10, left: 20, bottom: 15),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Our Other Services',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 20,
+                        fontWeight: FontWeight.w700,
+                      ),
+                    ),
+                    SizedBox(height: 5),
+                    Row(
+                      children: [
+                        OtherServices(
+                          text: 'Vendors',
+                          assets: 'assets/vendors.png',
+                        ),
+                        SizedBox(width: 15),
+                        OtherServices(
+                          text: 'Lights',
+                          assets: 'assets/lights.png',
+                        ),
+                        SizedBox(width: 15),
+                        OtherServices(
+                          text: 'Sound System',
+                          assets: 'assets/sound.png',
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(height: 15),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.only(left: 0, right: 0),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(0),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  top: 15,
+                  left: 20,
+                  bottom: 15,
+                  right: 20,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                      height: 55,
+                      width: 400,
+                      padding: EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(color: Color(0xFFECECEC), width: 2),
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/question.png',
+                            width: 30,
+                            height: 45,
+                            fit: BoxFit.fill,
                           ),
-                          SizedBox(width: 10),
-                          Upcomingevents(
-                            color: Color(0xFF3873EA),
-                            text: 'Early Bird',
-                            assets: 'assets/upcomingevent1.png',
+                          SizedBox(width: 20),
+                          Text('FAQs', style: TextStyle(fontSize: 16)),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 10),
+                    Container(
+                      height: 55,
+                      width: 400,
+                      padding: EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(color: Color(0xFFECECEC), width: 2),
+                      ),
+                      child: Row(
+                        children: [
+                          Image.asset(
+                            'assets/help.png',
+                            width: 30,
+                            height: 45,
+                            fit: BoxFit.fill,
                           ),
-                          SizedBox(width: 10),
-                          Upcomingevents(
-                            color: Color(0xFFFF2281),
-                            text: 'Fast Filling',
-                            assets: 'assets/upcomingevent1.png',
+                          SizedBox(width: 20),
+                          Text(
+                            'Help and Support',
+                            style: TextStyle(fontSize: 16),
                           ),
                         ],
                       ),
@@ -154,6 +357,47 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
           ],
+        ),
+      ),
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(24),
+          child: SalomonBottomBar(
+            margin: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+            backgroundColor: Colors.white,
+            currentIndex: _currentIndex,
+            onTap: (i) => setState(() => _currentIndex = i),
+            selectedItemColor: Colors.white,
+            unselectedItemColor: Colors.black,
+            items: [
+              SalomonBottomBarItem(
+                icon: Image.asset('assets/home.png'),
+                title: const Text(""),
+                selectedColor: Color(0xFFFF1479),
+              ),
+              SalomonBottomBarItem(
+                icon: Image.asset('assets/navticket.png'),
+                title: const Text(""),
+                selectedColor: Color(0xFFFF1479),
+              ),
+              SalomonBottomBarItem(
+                icon: Image.asset('assets/scan.png'),
+                title: const Text(""),
+                selectedColor: Color(0xFFFF1479),
+              ),
+              SalomonBottomBarItem(
+                icon: Image.asset('assets/notification.png'),
+                title: const Text(""),
+                selectedColor: Color(0xFFFF1479),
+              ),
+              SalomonBottomBarItem(
+                icon: Image.asset('assets/profile.png'),
+                title: const Text(""),
+                selectedColor: Color(0xFFFF1479),
+              ),
+            ],
+          ),
         ),
       ),
     );

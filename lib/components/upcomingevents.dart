@@ -14,7 +14,7 @@ class Upcomingevents extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 225,
+      height: 235,
       width: 200,
       decoration: BoxDecoration(
         color: Colors.white,
@@ -32,6 +32,7 @@ class Upcomingevents extends StatelessWidget {
                 ),
                 child: Image.asset(assets, fit: BoxFit.fill),
               ),
+
               Padding(
                 padding: const EdgeInsets.only(top: 10, left: 115),
                 child: Container(
