@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:workpracticeapp/components/appnavigationbar.dart';
 import 'package:workpracticeapp/components/logintextfield.dart';
 import 'package:workpracticeapp/components/passwordtextfield.dart';
 import 'package:workpracticeapp/components/reusablebutton.dart';
-import 'package:workpracticeapp/screens/home%20page/homescreen.dart';
 import 'package:workpracticeapp/screens/login%20and%20signup/resetpassword.dart';
 import 'package:workpracticeapp/screens/login%20and%20signup/signupscreen.dart';
 
@@ -79,7 +79,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       context,
                       MaterialPageRoute(
                         builder: (context) {
-                          return Homepage();
+                          return AppNavigationBar();
                         },
                       ),
                     );

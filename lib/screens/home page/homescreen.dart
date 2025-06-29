@@ -4,7 +4,6 @@ import 'package:workpracticeapp/components/ourservices.dart';
 import 'package:workpracticeapp/components/upcomingevents.dart';
 import 'package:workpracticeapp/screens/home%20page/hometopsection.dart';
 import 'package:workpracticeapp/screens/home%20page/reuseablecard.dart';
-import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
@@ -14,7 +13,6 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -357,47 +355,6 @@ class _HomepageState extends State<Homepage> {
               ),
             ),
           ],
-        ),
-      ),
-      bottomNavigationBar: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(24),
-          child: SalomonBottomBar(
-            margin: EdgeInsets.symmetric(horizontal: 12, vertical: 12),
-            backgroundColor: Colors.white,
-            currentIndex: _currentIndex,
-            onTap: (i) => setState(() => _currentIndex = i),
-            selectedItemColor: Colors.white,
-            unselectedItemColor: Colors.black,
-            items: [
-              SalomonBottomBarItem(
-                icon: Image.asset('assets/home.png'),
-                title: const Text(""),
-                selectedColor: Color(0xFFFF1479),
-              ),
-              SalomonBottomBarItem(
-                icon: Image.asset('assets/navticket.png'),
-                title: const Text(""),
-                selectedColor: Color(0xFFFF1479),
-              ),
-              SalomonBottomBarItem(
-                icon: Image.asset('assets/scan.png'),
-                title: const Text(""),
-                selectedColor: Color(0xFFFF1479),
-              ),
-              SalomonBottomBarItem(
-                icon: Image.asset('assets/notification.png'),
-                title: const Text(""),
-                selectedColor: Color(0xFFFF1479),
-              ),
-              SalomonBottomBarItem(
-                icon: Image.asset('assets/profile.png'),
-                title: const Text(""),
-                selectedColor: Color(0xFFFF1479),
-              ),
-            ],
-          ),
         ),
       ),
     );
