@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:workpracticeapp/components/upcomingevents.dart';
 
 class ReuseableCard extends StatelessWidget {
   final String text;

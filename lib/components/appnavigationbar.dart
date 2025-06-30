@@ -3,7 +3,7 @@ import 'package:workpracticeapp/screens/home%20page/homescreen.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 import 'package:workpracticeapp/screens/myprofilescreen.dart';
 import 'package:workpracticeapp/screens/myticketscreen.dart';
-import 'package:workpracticeapp/screens/notificationscreen.dart';
+import 'package:workpracticeapp/screens/notification%20page/notificationscreen.dart';
 
 class AppNavigationBar extends StatefulWidget {
   const AppNavigationBar({super.key});
@@ -26,6 +26,7 @@ class _AppNavigationBarState extends State<AppNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFF3F3F3),
       body: _screens[_currentIndex],
       bottomNavigationBar: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16, vertical: 10),
